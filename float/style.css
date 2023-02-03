@@ -1,0 +1,24 @@
+header{
+    background-color: steelblue;
+    height: 100px;
+}
+
+aside{
+    width: 30%;
+    float: left;
+    background-color: peachpuff;
+    height: 500px;
+}
+
+main{
+    float: left;
+    width: 70%;
+    background-color:darkgrey       ;
+    height: 700px;
+}
+
+footer{
+    clear: left;
+    background-color: aquamarine;
+    height: 200px;
+}
