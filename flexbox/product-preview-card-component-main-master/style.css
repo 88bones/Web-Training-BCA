@@ -80,4 +80,7 @@ button{
     font-weight: 700;
     border-radius: 10px;
     font-size: 16px;    
+    display: flex;
+    justify-content: center;
+    gap: 5px; 
 }
