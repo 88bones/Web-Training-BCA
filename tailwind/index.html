@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="bg-gray h-screen flex justify-center items-center">
+    <div class="container bg-gray-700 h-screen flex justify-center items-center">
         <div class="bg-slate-500 w-1/2 flex rounded-full overflow-hidden">
             <img src="./yeji.png"  class="w-64 h-64" alt="">
             <div class="py-8 px-12 text-white">
@@ -24,5 +25,20 @@
             </div>
         </div>
     </div>
+    <button class="bg-white-500">Dark Mode</button>
+    <script>
+        $('button').on('click',function(){
+            //$('.container').toggleClass('bg-white');
+            $.ajax({
+                method: 'get',
+                url:'https://icanhazdadjoke.com/',
+                headers:{
+                    'Accept':'application/json'
+                }
+            }).then(function(data){
+                $('blockquote').text(data.joke);
+            })
+        })
+    </script>
 </body>
 </html>
